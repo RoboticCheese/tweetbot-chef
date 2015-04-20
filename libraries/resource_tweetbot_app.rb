@@ -1,7 +1,7 @@
 # Encoding: UTF-8
 #
 # Cookbook Name:: tweetbot
-# Spec:: default
+# Library:: tweetbot_app
 #
 # Copyright 2015 Jonathan Hartman
 #
@@ -18,13 +18,23 @@
 # limitations under the License.
 #
 
-require 'spec_helper'
+class Chef
+  class Resource
+    # A Chef resource for the Tweetbot app.
+    #
+    # @author Jonathan Hartman <j@p4nt5.com>
+    class TweetbotApp < MacAppStoreApp
+      self.resource_name = :tweetbot_app
 
-describe 'tweetbot::default' do
-  # Serverspec examples can be found at
-  # http://serverspec.org/resource_types.html
-  
-  it 'does something' do
-    skip 'Replace this with meaningful tests'
+      #
+      # Overload the app name with the one for this app.
+      #
+      attribute :app_name, kind_of: String, default: 'Tweetbot for Twitter'
+
+      #
+      # Overload the bundle ID with the one for this app.
+      #
+      attribute :bundle_id, kind_of: String, default: 'com.tapbots.TweetbotMac'
+    end
   end
 end

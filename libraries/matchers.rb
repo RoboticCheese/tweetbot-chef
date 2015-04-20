@@ -1,7 +1,7 @@
 # Encoding: UTF-8
 #
 # Cookbook Name:: tweetbot
-# Recipe:: default
+# Library:: matchers
 #
 # Copyright 2015 Jonathan Hartman
 #
@@ -18,8 +18,8 @@
 # limitations under the License.
 #
 
-include_recipe 'mac-app-store'
-
-tweetbot_app 'default' do
-  action :install
+if defined?(ChefSpec)
+  def install_tweetbot_app(name)
+    ChefSpec::Matchers::ResourceMatcher.new(:tweetbot_app, :install, name)
+  end
 end

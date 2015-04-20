@@ -1,74 +1,68 @@
 Tweetbot Cookbook
 =================
-[![Cookbook Version](http://img.shields.io/cookbook/v/tweetbot.svg)][cookbook]
-[![Build Status](http://img.shields.io/travis/RoboticCheese/tweetbot-chef.svg)][travis]
-[![Code Climate](http://img.shields.io/codeclimate/github/RoboticCheese/tweetbot-chef.svg)][codeclimate]
-[![Coverage Status](http://img.shields.io/coveralls/RoboticCheese/tweetbot-chef.svg)][coveralls]
+[![Cookbook Version](https://img.shields.io/cookbook/v/tweetbot.svg)][cookbook]
+[![Build Status](https://img.shields.io/travis/RoboticCheese/tweetbot-chef.svg)][travis]
+[![Code Climate](https://img.shields.io/codeclimate/github/RoboticCheese/tweetbot-chef.svg)][codeclimate]
+[![Coverage Status](https://img.shields.io/coveralls/RoboticCheese/tweetbot-chef.svg)][coveralls]
 
 [cookbook]: https://supermarket.chef.io/cookbooks/tweetbot
-[travis]: http://travis-ci.org/RoboticCheese/tweetbot-chef
+[travis]: https://travis-ci.org/RoboticCheese/tweetbot-chef
 [codeclimate]: https://codeclimate.com/github/RoboticCheese/tweetbot-chef
 [coveralls]: https://coveralls.io/r/RoboticCheese/tweetbot-chef
 
-TODO: Enter the cookbook description here.
+A Chef cookbook to install Tweetbot.
 
 Requirements
 ============
 
-TODO: Describe cookbook dependencies.
+This cookbook offers a recipe-based and a resource-based install. Use of the
+resource requires that you open a `mac_app_store` resource prior in your Chef
+run.
 
 Usage
 =====
 
-TODO: Describe how to use the cookbook.
+Either add the default recipe to your run_list, or implement the resource in
+a recipe of your own.
 
 Recipes
 =======
 
 ***default***
 
-TODO: Describe each component recipe.
-
-Attributes
-==========
-
-***default***
-
-TODO: Describe any noteworthy attributes.
+Opens the Mac App Store and performs a simple install of the app.
 
 Resources
 =========
 
-***tweetbot***
+***tweetbot_app***
 
-TODO: Describe each included resource.
+Used to perform installation of the app.
 
 Syntax:
 
-    tweetbot 'my_resource' do
-        attribute1 'value1'
-        action :create
+    tweetbot_app 'default' do
+        action :install
     end
 
 Actions:
 
-| Action  | Description  |
-|---------|--------------|
-| action1 | Do something |
+| Action     | Description     |
+|------------|-----------------|
+| `:install` | Install the app |
 
 Attributes:
 
 | Attribute  | Default        | Description          |
 |------------|----------------|----------------------|
-| attribute1 | `'some_value'` | Do something         |
-| action     | `:create`      | Action(s) to perform |
+| action     | `:install`     | Action(s) to perform |
 
 Providers
 =========
 
-TODO: Describe each included provider
+***Chef::Provider::TweetbotApp***
 
-***Chef::Provider::SomeProvider***
+Provider for handling installation of the app.
 
 Contributing
 ============
