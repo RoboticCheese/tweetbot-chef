@@ -9,7 +9,7 @@ description      'Installs/Configures Tweetbot'
 long_description 'Installs/Configures Tweetbot'
 version          '0.0.1'
 
-depends          'mac-app-store', '~> 0.1'
+depends          'mac-app-store', '~> 0.0.1'
 
 supports         'mac_os_x'
 # rubocop:enable SingleSpaceBeforeFirstArg
