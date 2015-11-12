@@ -1,15 +1,15 @@
 # Encoding: UTF-8
 #
 # rubocop:disable SingleSpaceBeforeFirstArg
-name             'tweetbot'
+name             'tweetbot_app_test'
 maintainer       'Jonathan Hartman'
 maintainer_email 'j@p4nt5.com'
 license          'apache2'
-description      'Installs Tweetbot'
-long_description 'Installs Tweetbot'
-version          '0.1.1'
+description      'tweetbot_app resource test wrapper'
+long_description 'tweetbot_app resource test wrapper'
+version          '0.0.1'
 
-depends          'mac-app-store', '~> 1.0'
+depends          'tweetbot'
 
 supports         'mac_os_x'
 # rubocop:enable SingleSpaceBeforeFirstArg
