@@ -18,8 +18,4 @@
 # limitations under the License.
 #
 
-include_recipe 'mac-app-store'
-
-tweetbot_app 'default' do
-  action :install
-end
+tweetbot_app 'default'

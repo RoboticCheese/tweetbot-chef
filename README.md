@@ -19,6 +19,8 @@ This cookbook offers a recipe-based and a resource-based install. Use of the
 resource requires that you open a `mac_app_store` resource prior in your Chef
 run.
 
+As of version 1.0.0, this cookbook requires Chef 12.5 or newer.
+
 Usage
 =====
 
@@ -56,13 +58,6 @@ Attributes:
 | Attribute  | Default        | Description          |
 |------------|----------------|----------------------|
 | action     | `:install`     | Action(s) to perform |
-
-Providers
-=========
-
-***Chef::Provider::TweetbotApp***
-
-Provider for handling installation of the app.
 
 Contributing
 ============
