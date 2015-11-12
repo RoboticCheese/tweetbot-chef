@@ -1,6 +1,9 @@
 Tweetbot Cookbook CHANGELOG
 ===========================
 
+v?.?.? (????-??-??)
+-------------------
+
 v1.0.0 (2015-11-12)
 -------------------
 - Update the `mac-app-store` dependency version
