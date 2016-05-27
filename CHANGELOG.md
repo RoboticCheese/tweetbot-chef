@@ -1,8 +1,9 @@
 Tweetbot Cookbook CHANGELOG
 ===========================
 
-v?.?.? (????-??-??)
--------------------
+Unreleased
+----------
+- Update for mac-app-store cookbook v2.0
 
 v1.0.0 (2015-11-12)
 -------------------

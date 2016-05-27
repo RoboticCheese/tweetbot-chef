@@ -3,7 +3,7 @@
 # Cookbook Name:: tweetbot
 # Library:: resource_tweetbot_app
 #
-# Copyright 2015 Jonathan Hartman
+# Copyright 2015-2016, Jonathan Hartman
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ class Chef
     # A Chef resource for the Tweetbot app.
     #
     # @author Jonathan Hartman <j@p4nt5.com>
-    class TweetbotApp < MacAppStoreApp
+    class TweetbotApp < Resource
       provides :tweetbot_app, platform_family: 'mac_os_x'
 
       Chef::Resource::MacAppStoreApp.allowed_actions.each do |a|
@@ -33,7 +33,6 @@ class Chef
           include_recipe 'mac-app-store' unless a == :nothing
 
           mac_app_store_app 'Tweetbot for Twitter' do
-            bundle_id 'com.tapbots.TweetbotMac'
             action a
           end
         end
